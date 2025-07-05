@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginBottom="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Task Status -->
+    <TextView
+        android:id="@+id/tvTaskTitle"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="Task Title"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/cbTaskStatus"
+        app:layout_constraintEnd_toStartOf="@+id/tvDueDate"
+        app:layout_constraintStart_toEndOf="@+id/cbTaskStatus"
+        app:layout_constraintTop_toTopOf="@+id/cbTaskStatus" />
+
+    <CheckBox
+        android:id="@+id/cbTaskStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <!-- Due Date -->
+
+    <!-- Priority Tag -->
+
+    <TextView
+        android:id="@+id/tvDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Due: 21 Jun 2025"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="12sp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvPriority"
+        app:layout_constraintEnd_toStartOf="@+id/tvPriority"
+        app:layout_constraintTop_toTopOf="@+id/tvPriority" />
+
+    <ImageView
+        android:id="@+id/imgReminderToggle"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="8dp"
+        android:contentDescription="Reminder Icon"
+        android:src="@drawable/ic_alarm_off"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tvPriority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_priority_tag"
+        android:gravity="center"
+        android:minWidth="50dp"
+        android:padding="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="High"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTaskTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTaskTitle" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:maxLines="3"
+        android:text="Sample"
+        app:layout_constraintEnd_toEndOf="@+id/tvPriority"
+        app:layout_constraintStart_toStartOf="@+id/tvTaskTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvTaskTitle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
